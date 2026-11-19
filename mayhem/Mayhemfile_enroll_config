@@ -1,0 +1,9 @@
+project: savantenvs/Limine
+target: enroll_config
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_enroll_config
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/enroll_config/testsuite

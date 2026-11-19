@@ -1,0 +1,9 @@
+project: savantenvs/Limine
+target: uri
+cmds:
+  - cmd: /mayhem/mayhem/out/uri @@
+    afl: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/uri/testsuite
